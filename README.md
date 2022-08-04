@@ -1,7 +1,7 @@
 <!-- Logo -->
-<div id="content" align="center" >
-<img src="docs/logo/PHpoly_Logo_Light.svg#gh-dark-mode-only" align="center" width="45%"/>
-<img src="docs/logo/PHpoly_Logo_Dark.svg#gh-light-mode-only" align="center" width="45%"/>
+<div align="center" >
+<img src="./docs/logo/PHPoly_Logo_Light.svg#gh-dark-mode-only" align="center" width="45%"/>
+<img src="./docs/logo/PHPoly_Logo_Dark.svg#gh-light-mode-only" align="center" width="45%"/>
 </div>
 
 <!-- Content -->
@@ -22,13 +22,16 @@ The game can be restarted clicking the ♻️ icon and a form will appear to ent
 ## UI Details
 | Transaction between players  | Dice and buttons switch |
 |:---:|:-----------------------:|
-|<img src="./docs/captures/gifs/transaction.gif" alt="Transaction between players GIF">|<img src="./docs/captures/gifs/dice.gif" alt="Transaction between players GIF">|
+|<img src="./docs/captures/gifs/Transaction.gif" alt="Transaction between players GIF">|<img src="./docs/captures/gifs/dice.gif" alt="Transaction between players GIF">|
 
 **Properties purchased by the players**
+
 ![](./docs/captures/imgs/Casillas.png)
 
+
 **New Player form**
-![New Player form](./docs/captures/gifs/NewPlayer.gif)
+
+<img src="./docs/captures/gifs/NewPlayer.gif" alt="New Player form" width="50%">
 
 ## Deploy
 1. Copy or clone the repository into your PHP folder
