@@ -9,7 +9,7 @@
 
 The players names and icons are stored in a SQL database.
 
-You can try a **fully** functional version [here]() but note that the names of the players and their icons are set by default so, if you summit the restart form, it will probably throw an error.
+You can try a **fully** functional version [here](https://la-lo-go.github.io/the-PHPoly/index_html.html) but note that the names of the players and their icons are set by default so, if you summit the restart form, it will probably throw an error.
 
 ## Gameplay 
 ![General example demostration GIF](./docs/captures/gifs/GeneralExample.gif)
