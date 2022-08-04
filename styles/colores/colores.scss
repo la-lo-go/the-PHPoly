@@ -1,0 +1,48 @@
+// Colores jugadores y demas
+$azul: #2df9ff;
+$azulOscuro: #316163;
+$azulClaro: #30d1d6;
+$rosa: #e8637f;
+$amarillo: #ebd160;
+$verde: #79d9a3;
+$morado: #6f6280;
+$translucent: #ffffff95;
+$grisClaroTrans: rgba(211, 211, 211, 0.768);
+$hover: rgba(69, 104, 105, 0.604);
+
+
+// mapa de colores jugadores
+$color-map: (
+  azul: $azul,
+  rosa: $rosa,
+  amarillo: $amarillo,
+  verde: $verde,
+  morado: $morado,
+);
+
+// Colores tablero
+$black: #080808;
+$brown: #3e0000;
+$board: #f0f0f0;
+$dark-purple: #5e3577;
+$light-blue: #d2eaf5;
+$purple: #b02f7c;
+$orange: #fa811d;
+$red: #ba0C2f;
+$yellow: #ffed20;
+$green: #41994e;
+$dark-blue: #5a6dba;
+
+$propiedades-map: (
+  black : $black,
+  brown : $brown,
+  board : $board,
+  dark-purple : $dark-purple,
+  light-blue : $light-blue,
+  purple : $purple,
+  orange : $orange,
+  red : $red,
+  yellow : $yellow,
+  green : $green,
+  dark-blue : $dark-blue,
+);

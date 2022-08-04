@@ -1,0 +1,231 @@
+// =================
+// IMPORTAR COLORES
+// =================
+@import "../colores/colores.scss";
+
+
+
+// =================
+// LADOS
+// =================
+.sides {
+  background-color: $board;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0em 0em 0.5em 0.5em rgba(0, 0, 0, 0.123);
+}
+
+// =================
+// DICE
+// =================
+#dice {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  transform-style: preserve-3d;
+  transition: transform 1.5s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $hover;
+  }
+
+  .side-1 {
+    transform: translateZ(45px);
+  }
+
+  &[data-side="1"] {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg);
+
+    &.reRoll {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+  }
+
+  .side-2 {
+    transform: rotateX(-180deg) translateZ(45px);
+  }
+
+  &[data-side="2"] {
+    transform: rotateX(360deg) rotateY(540deg) rotateZ(720deg);
+
+    &.reRoll {
+      transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+    }
+  }
+
+  .side-3 {
+    transform: rotateY(90deg) translateZ(45px);
+  }
+
+  &[data-side="3"] {
+    transform: rotateX(360deg) rotateY(630deg) rotateZ(720deg);
+
+    &.reRoll {
+      transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg);
+    }
+  }
+
+  .side-4 {
+    transform: rotateY(-90deg) translateZ(45px);
+  }
+
+  &[data-side="4"] {
+    transform: rotateX(360deg) rotateY(450deg) rotateZ(720deg);
+
+    &.reRoll {
+      transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+    }
+  }
+
+  .side-5 {
+    transform: rotateX(90deg) translateZ(45px);
+  }
+
+  &[data-side="5"] {
+    transform: rotateX(630deg) rotateY(360deg) rotateZ(720deg);
+
+    &.reRoll {
+      transform: rotateX(270deg) rotateY(0deg) rotateZ(0deg);
+    }
+  }
+
+  .side-6 {
+    transform: rotateX(-90deg) translateZ(45px);
+  }
+
+  &[data-side="6"] {
+    transform: rotateX(450deg) rotateY(360deg) rotateZ(720deg);
+
+    &.reRoll {
+      transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+    }
+  }
+}
+
+// =================
+// DOTS
+// =================
+.dot {
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: black;
+  transform: translate(-50%, -50%);
+}
+
+/* 1 */
+.side-1 {
+  .dot-1 {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+/* 2 */
+.side-2 {
+  .dot-1 {
+    top: 25%;
+    left: 25%;
+  }
+  .dot-2 {
+    top: 75%;
+    left: 75%;
+  }
+}
+
+/* 3 */
+.side-3 {
+  .dot-1 {
+    top: 25%;
+    left: 25%;
+  }
+  .dot-2 {
+    top: 75%;
+    left: 75%;
+  }
+  .dot-3 {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+/* 4 */
+.side-4 {
+  .dot-1 {
+    top: 25%;
+    left: 25%;
+  }
+  .dot-2 {
+    top: 25%;
+    left: 75%;
+  }
+  .dot-3 {
+    top: 75%;
+    left: 25%;
+  }
+  .dot-4 {
+    top: 75%;
+    left: 75%;
+  }
+}
+
+/* 5 */
+.side-5 {
+  .dot-1 {
+    top: 25%;
+    left: 25%;
+  }
+  .dot-2 {
+    top: 25%;
+    left: 75%;
+  }
+  .dot-3 {
+    top: 75%;
+    left: 25%;
+  }
+  .dot-4 {
+    top: 75%;
+    left: 75%;
+  }
+  .dot-5 {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+/* 6 */
+.side-6 {
+  .dot-1 {
+    top: 25%;
+    left: 25%;
+  }
+  .dot-2 {
+    top: 25%;
+    left: 75%;
+  }
+  .dot-3 {
+    top: 75%;
+    left: 25%;
+  }
+  .dot-4 {
+    top: 75%;
+    left: 75%;
+  }
+  .dot-5 {
+    top: 50%;
+    left: 25%;
+  }
+  .dot-6 {
+    top: 50%;
+    left: 75%;
+  }
+}

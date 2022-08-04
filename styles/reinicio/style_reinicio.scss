@@ -1,0 +1,177 @@
+// =================
+// IMPORTAR COLORES
+// =================
+@import "../colores/colores.scss";
+
+$size: 1.8em;
+$rutaFotos: "../../static/iconos/";
+
+#form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+// =================
+// TARJETAS
+// =================
+
+.tarjetas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  > div {
+    margin: 1.5%;
+  }
+}
+
+// =================
+// Input texts
+// =================
+.Input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3% 2% 2% 2%;
+  font-size: 1rem;
+
+  :focus, :hover {
+    transition: 0.5s;
+    outline: none;
+    box-shadow: 0.2em 0.2em $translucent;
+  }
+
+  ::placeholder {
+    color: $azulOscuro;
+  }
+}
+
+.jugador {
+  border-radius: 25px;
+  padding: 1%;
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+.Input-text {
+  display: flex;
+  padding: 2%;
+  width: 100%;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.5s;
+}
+
+// =================
+// fotos
+// =================
+input[type="radio"] {
+  display: none;
+}
+
+.fotos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+// MAPA DE FOTOS
+$fotosJ1: (
+  fotoJ11: $rutaFotos + "avion.png",
+  fotoJ12: $rutaFotos + "pretzel.png",
+  fotoJ13: $rutaFotos + "taza.png",
+  fotoJ14: $rutaFotos + "gelatina.png",
+);
+
+$fotosJ2: (
+  fotoJ21: $rutaFotos + "avion.png",
+  fotoJ22: $rutaFotos + "pretzel.png",
+  fotoJ23: $rutaFotos + "taza.png",
+  fotoJ24: $rutaFotos + "gelatina.png",
+);
+
+$fotosJ3: (
+  fotoJ31: $rutaFotos + "avion.png",
+  fotoJ32: $rutaFotos + "pretzel.png",
+  fotoJ33: $rutaFotos + "taza.png",
+  fotoJ34: $rutaFotos + "gelatina.png",
+);
+
+$fotosJ4: (
+  fotoJ41: $rutaFotos + "avion.png",
+  fotoJ42: $rutaFotos + "pretzel.png",
+  fotoJ43: $rutaFotos + "taza.png",
+  fotoJ44: $rutaFotos + "gelatina.png",
+);
+
+$fotos: map-merge(map-merge($fotosJ1, $fotosJ2), map-merge($fotosJ3, $fotosJ4));
+
+// Da a cada boton su foto de fondo correspondiente
+// Creditos: https://jsfiddle.net/0c26tqd7/1/
+@each $nombre, $ruta in $fotos {
+  input##{$nombre}[type="radio"] + label {
+    border-color: transparent;
+    background-image: url($ruta);
+    background-repeat: no-repeat;
+    background-color: $translucent;
+    background-origin: content-box;
+    border: 0.2rem solid white;
+    border-radius: 20px;
+    background-size: contain;
+    height: $size;
+    width: $size;
+    display: inline-block;
+    padding: 2%;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    transition: 0.5s;
+
+    &:hover {
+      outline: none;
+      box-shadow: 0.1em 0.1em $translucent;
+      transform: scale(1.02);
+    }
+  }
+
+  input##{$nombre}[type="radio"]:checked + label {
+    background-color: $translucent;
+    border-style: solid;
+    filter: invert(75%);
+  }
+}
+
+// =================
+// Boton
+// =================
+.boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0.5%;
+
+  input[type="submit"] {
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 1rem;
+    background-color: $azul;
+    color: white;
+    font: Oswald;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: $azulClaro;
+      box-shadow: 0.1em 0.1em $translucent;
+    }
+  }
+}

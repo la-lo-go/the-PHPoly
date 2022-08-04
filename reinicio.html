@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/general/style_general.css" media="all">
+    <link rel="stylesheet" href="./styles/reinicio/style_reinicio.css" media="all">
+    <link rel="stylesheet" href="./styles/normalize.css" media="all">
+    <link rel="shortcut icon" href="./static/favicon.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="./scripts/radioChecker.js"></script>
+        <title>Reinicio</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">the PHPoly</div>
+    </header>
+
+    <form action="./reinicio.php" method="post">
+        <div id="form">
+            <div class="tarjetas">
+                <div class="jugador morado">
+                    <div class="Input">
+                        <input type="text" id="nombreJ1" name="nombreJ1" class="Input-text" placeholder="Nombre jugador morado" required maxlength="20">
+                    </div>
+                    <div class="fotos">
+                        <input type="radio" name='foto1' id='fotoJ11' value='avion'><label for='fotoJ11'>ㅤ</label>
+                        <input type="radio" name='foto1' id='fotoJ12' value='pretzel'><label for='fotoJ12'>ㅤ</label>
+                        <input type="radio" name='foto1' id='fotoJ13' value='taza'><label for='fotoJ13'>ㅤ</label>
+                        <input type="radio" name='foto1' id='fotoJ14' value='gelatina'><label for='fotoJ14'>ㅤ</label>
+                    </div>
+                </div>
+
+                <div class="jugador rosa">
+                    <div class="Input">
+                        <input type="text" id="nombreJ2" name="nombreJ2" class="Input-text" placeholder="Nombre jugador rosa" required maxlength="20">
+                    </div>
+                    <div class="fotos">
+                        <input type="radio" name='foto2' id='fotoJ21' value='avion'><label for='fotoJ21'>ㅤ</label>
+                        <input type="radio" name='foto2' id='fotoJ22' value='pretzel'><label for='fotoJ22'>ㅤ</label>
+                        <input type="radio" name='foto2' id='fotoJ23' value='taza'><label for='fotoJ23'>ㅤ</label>
+                        <input type="radio" name='foto2' id='fotoJ24' value='gelatina'><label for='fotoJ24'>ㅤ</label>
+                    </div>
+                </div>
+
+                <div class="jugador amarillo">
+                    <div class="Input">
+                        <input type="text" id="nombreJ3"  name="nombreJ3" class="Input-text" placeholder="Nombre jugador amarillo" required maxlength="20">
+                    </div>
+                    <div class="fotos">
+                        <input type="radio" name='foto3' id='fotoJ31' value='avion'><label for='fotoJ31'>ㅤ</label>
+                        <input type="radio" name='foto3' id='fotoJ32' value='pretzel'><label for='fotoJ32'>ㅤ</label>
+                        <input type="radio" name='foto3' id='fotoJ33' value='taza'><label for='fotoJ33'>ㅤ</label>
+                        <input type="radio" name='foto3' id='fotoJ34' value='gelatina'><label for='fotoJ34'>ㅤ</label>
+                    </div>
+                </div>
+
+                <div class="jugador verde">
+                    <div class="Input">
+                        <input type="text" id="nombreJ4" name="nombreJ4" class="Input-text" placeholder="Nombre jugador verde" required maxlength="20">
+                    </div>
+                    <div class="fotos">
+                        <input type="radio" name='foto4' id='fotoJ41' value='avion'><label for='fotoJ41'>ㅤ</label>
+                        <input type="radio" name='foto4' id='fotoJ42' value='pretzel'><label for='fotoJ42'>ㅤ</label>
+                        <input type="radio" name='foto4' id='fotoJ43' value='taza'><label for='fotoJ43'>ㅤ</label>
+                        <input type="radio" name='foto4' id='fotoJ44' value='gelatina'><label for='fotoJ44'>ㅤ</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="boton">
+                <input type="submit" value="Empezar partida" id="reiniciar" name="reiniciar" hidden>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>

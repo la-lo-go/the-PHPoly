@@ -1,0 +1,137 @@
+// =================
+// IMPORTAR COLORES
+// =================
+@import "../colores/colores.scss";
+
+
+// =================
+// FUENTES
+// =================
+@font-face {
+  font-family: "American Typewriter";
+  src: URL("../../static/fonts/American Typewriter Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: URL("../../static/fonts/Oswald-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald Bold";
+  src: URL("../../static/fonts/Oswald-Bold.ttf") format("truetype");
+}
+
+
+// =================
+// CUERPO
+// =================
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+  margin: auto;
+  width: 100%;
+}
+
+body {
+  font-family: "Oswald", sans-serif, Monospace;
+  font-size: 2em;
+  margin: 0;
+  background:
+  url("../../static/fondo.png")
+  repeat 0 0;
+  -webkit-animation: 10s linear 0s normal none infinite animate;
+  -moz-animation: 10s linear 0s normal none infinite animate;
+  -ms-animation: 10s linear 0s normal none infinite animate;
+  -o-animation: 10s linear 0s normal none infinite animate;
+  animation: 10s linear 0s normal none infinite animate;
+  overflow: hidden;
+}
+
+
+// =================
+// HEADER
+// =================
+header {
+  color: white;
+  margin-bottom: 1%;
+  font-size: 2em;
+  font-size: 1.5vw;
+  
+  #logo {
+    text-align: center;
+    font-family: "American Typewriter";
+    padding: 1%;
+  }
+}
+
+
+// ========================
+// CLASES COLORES DE FONDO
+// ========================
+@each $name, $color in $color-map {
+  .#{$name} {
+    background-color: $color;
+  }	
+}
+
+h1{
+  font-family: "Oswald Bold", sans-serif, Monospace;
+  font-size: 3em;
+  color: $azul;
+  text-align: center;
+  margin-top: 5%;
+}
+
+
+// =================
+// ANIMACION FONDO
+// =================
+@-webkit-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-moz-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-ms-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-o-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}

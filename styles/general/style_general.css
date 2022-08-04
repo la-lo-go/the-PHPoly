@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "American Typewriter";
+  src: URL("../../static/fonts/American Typewriter Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: URL("../../static/fonts/Oswald-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald Bold";
+  src: URL("../../static/fonts/Oswald-Bold.ttf") format("truetype");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+  margin: auto;
+  width: 100%;
+}
+
+body {
+  font-family: "Oswald", sans-serif, Monospace;
+  font-size: 2em;
+  margin: 0;
+  background: url("../../static/fondo.png") repeat 0 0;
+  -webkit-animation: 10s linear 0s normal none infinite animate;
+  animation: 10s linear 0s normal none infinite animate;
+  overflow: hidden;
+}
+
+header {
+  color: white;
+  margin-bottom: 1%;
+  font-size: 2em;
+  font-size: 1.5vw;
+}
+
+header #logo {
+  text-align: center;
+  font-family: "American Typewriter";
+  padding: 1%;
+}
+
+.azul {
+  background-color: #2df9ff;
+}
+
+.rosa {
+  background-color: #e8637f;
+}
+
+.amarillo {
+  background-color: #ebd160;
+}
+
+.verde {
+  background-color: #79d9a3;
+}
+
+.morado {
+  background-color: #6f6280;
+}
+
+h1 {
+  font-family: "Oswald Bold", sans-serif, Monospace;
+  font-size: 3em;
+  color: #2df9ff;
+  text-align: center;
+  margin-top: 5%;
+}
+
+@-webkit-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+/*# sourceMappingURL=style_general.css.map */

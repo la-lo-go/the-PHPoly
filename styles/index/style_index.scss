@@ -1,0 +1,639 @@
+// =================
+// IMPORTAR COLORES
+// =================
+@import "../colores/colores.scss";
+
+// =================
+// BTN REINCIO
+// =================
+.btn-reinicio {
+  position: relative;
+
+  a {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 3vw;
+
+    input {
+      padding-bottom: 9%;
+      border-radius: 0.6rem;
+      border: none;
+      background-color: $board;
+      transition: 0.25s ease;
+      cursor: pointer;
+      background-image: url("../../static/iconos/reinicio.png");
+      background-size: 3.5rem;
+      background-position: center;
+      width: 4rem;
+      height: 4rem;
+      background-repeat: no-repeat;
+
+      &:hover {
+        background-color: $translucent;
+      }
+    }
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+@each $name, $color in $color-map {
+  .#{$name} {
+    background-color: $color;
+  }
+}
+
+// =================
+// CONTAINER GENERAL
+// =================
+.container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "tarjetas tablero";
+}
+
+// =================
+// TARJETAS
+// =================
+.tarjetas {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-area: tarjetas;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 5% 0%;
+  margin-left: 5%;
+  height: 55%;
+}
+
+// tarjeta individual
+.tarjeta {
+  grid-area: auto;
+  color: white;
+  font-size: 1em;
+  font-size: 1vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "foto datos-jugador";
+  gap: 5% 0%;
+  background-color: $azul;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  padding: 1%;
+  padding-right: 5%;
+  transition: 0.5s ease;
+}
+
+.foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: foto;
+  width: 90%;
+  height: 90%;
+  margin-left: 5%;
+
+  img {
+    width: 70%;
+    height: 70%;
+    background-color: $translucent;
+    border-radius: 20px;
+    padding: 10%;
+  }
+}
+
+.datos-jugador {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "nombre nombre nombre"
+    "dinero dinero propiedades"
+    "dinero dinero propiedades-cantidad";
+  grid-area: datos-jugador;
+  align-items: center;
+}
+
+.nombre {
+  grid-area: nombre;
+  font-size: 1.5em;
+}
+
+.dinero {
+  grid-area: dinero;
+  transition: 1s ease-out;
+}
+
+.propiedades {
+  grid-area: propiedades;
+}
+
+.propiedades-cantidad {
+  grid-area: propiedades-cantidad;
+}
+
+// =================
+// TABLERO
+// =================
+.tablero {
+  //   background-color: $translucent;
+  font-size: 10px;
+  font-weight: 400;
+  color: $black;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: tablero;
+  height: 55%;
+}
+
+// Property colors
+@each $name, $color in $propiedades-map {
+  .#{$name} {
+    background-color: $color;
+  }
+}
+
+// =================
+// LAYOUT
+// =================
+
+// Table and board
+.table {
+  transition: 0.5s ease;
+  transform: scale(0.5);
+
+  &:hover {
+    transform: scale(0.55) translateY(-3%);
+  }
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 125px 80px 80px 80px 80px 80px 80px 80px 80px 80px 125px;
+  grid-template-rows: 125px 80px 80px 80px 80px 80px 80px 80px 80px 80px 125px;
+  grid-gap: 2px;
+  margin: 50px auto;
+  width: auto;
+  height: auto;
+  background: $black;
+  border: 2px solid $black;
+  transform: scale(1.25);
+}
+
+.center {
+  grid-column: 2 / 11;
+  grid-row: 2 / 11;
+  background: $board;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+#mensaje {
+  grid-column: 1 / 9;
+  grid-row: 1 / 4;
+  font-size: 3em;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.title {
+  grid-column: 1 / 9;
+  grid-row: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.botones {
+  grid-column: 2 / 9;
+  grid-row: 4;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+
+  input[type="button"] {
+    margin: 1%;
+    border-radius: 1.5rem;
+    background-color: $board;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 0.5vw;
+    background-size: 6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 8rem;
+    height: 8rem;
+    transition: 0.25s ease;
+
+    &:hover:enabled,
+    &:focus:enabled {
+      background-color: $hover;
+    }
+
+    &#comprar {
+      background-image: url("../../static/iconos/moneda.png");
+    }
+
+    &#pasar {
+      background-image: url("../../static/iconos/flecha.png");
+    }
+  }
+}
+
+.label {
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
+}
+
+// Rows of spaces
+.row {
+  display: grid;
+  grid-gap: 2px;
+}
+
+.horizontal-row {
+  grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+  grid-template-rows: 125px;
+}
+
+.vertical-row {
+  grid-template-columns: 125px;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+
+  .container {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.bottom-row {
+  grid-column: 2 / 11;
+  grid-row: 11;
+}
+
+.left-row {
+  grid-column: 1;
+  grid-row: 2 / 11;
+
+  .container {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+
+.top-row {
+  grid-column: 2 / 11;
+  grid-row: 1;
+
+  .container {
+    transform: rotate(180deg);
+  }
+}
+
+.right-row {
+  grid-column: 11;
+  grid-row: 2 / 11;
+
+  .container {
+    transform: translate(-50%, -50%) rotate(270deg);
+  }
+}
+
+// =================
+// SPACES
+// =================
+// Types of spaces
+.space {
+  background: $board;
+  text-align: center;
+  transition: 0.5s ease;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transform-origin: center;
+    height: 125px;
+    width: 80px;
+  }
+
+  .name,
+  .instructions {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .price {
+    font-size: 10px;
+    font-weight: 400;
+    padding-bottom: 5px;
+  }
+}
+
+.corner {
+  .container {
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+  }
+
+  .name {
+    padding: 0;
+  }
+}
+
+.property {
+  .color-bar {
+    height: 25px;
+    border-bottom: 2px solid $black;
+  }
+
+  .name {
+    padding-bottom: 50px;
+  }
+}
+
+.railroad {
+  .name {
+    padding-top: 10px;
+  }
+
+  .drawing {
+    font-size: 60px;
+    color: $black;
+  }
+}
+
+.utility {
+  .name {
+    padding-top: 10px;
+  }
+
+  .drawing {
+    font-size: 70px;
+  }
+}
+
+.fee {
+  .name {
+    padding-top: 10px;
+    font-size: 14px;
+  }
+
+  .instructions {
+    font-size: 10px;
+  }
+}
+
+// Specific spaces
+.go {
+  grid-column: 11;
+  grid-row: 11 / 12;
+  position: relative;
+
+  .container {
+    justify-content: flex-start;
+    transform: rotate(315deg);
+  }
+
+  .instructions {
+    padding: 0 30px;
+  }
+
+  .go-word {
+    font-size: 60px;
+    color: $red;
+  }
+
+  .arrow {
+    font-size: 45px;
+    color: $red;
+    position: absolute;
+    bottom: -10px;
+    left: 5px;
+  }
+}
+
+.jail {
+  grid-column: 1;
+  grid-row: 11 / 12;
+  display: grid;
+  grid-template-columns: 12.5px 12.5px 12.5px 12.5px 12.5px 12.5px 12.5px 12.5px 12.5px 12.5px;
+  grid-template-rows: 12.5px 12.5px 12.5px 12.5px 12.5px 12.5px 12.5px 12.5px 12.5px 12.5px;
+  justify-content: center;
+  align-items: center;
+
+  .drawing {
+    grid-column: 4 / 11;
+    grid-row: 1 / 8;
+    width: 87.5px;
+    height: 87.5px;
+    background: $orange;
+    border-bottom: 2px solid $black;
+    border-left: 2px solid $black;
+  }
+
+  .just {
+    grid-column: 3;
+    grid-row: 4;
+    transform: rotate(90deg);
+    padding-top: 5px;
+  }
+
+  .visiting {
+    grid-column: 6;
+    grid-row: 8;
+    padding-top: 5px;
+  }
+
+  .container {
+    align-items: center;
+    transform: rotate(45deg);
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .window {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 55px;
+    height: 55px;
+    background: $board;
+    border: 2px solid $black;
+  }
+
+  .person {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+  }
+
+  .bar {
+    height: 55px;
+    width: 2px;
+    background: $black;
+  }
+}
+
+.free-parking {
+  grid-column: 1;
+  grid-row: 1 / 2;
+
+  .container {
+    justify-content: center;
+    transform: rotate(135deg);
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .drawing {
+    font-size: 60px;
+    color: $red;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.go-to-jail {
+  grid-column: 11;
+  grid-row: 1 / 1;
+
+  .container {
+    justify-content: center;
+    transform: rotate(225deg);
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .drawing {
+    font-size: 60px;
+    color: $brown;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.chance {
+  .container {
+    justify-content: center;
+  }
+
+  .drawing {
+    font-size: 90px;
+    color: $red;
+  }
+
+  .blue {
+    color: $dark-blue;
+  }
+}
+
+.community-chest {
+  .container {
+    justify-content: space-around;
+  }
+
+  .drawing {
+    font-size: 50px;
+    color: $light-blue;
+  }
+
+  .instructions {
+    font-size: 8px;
+  }
+}
+
+.electric-company {
+  .drawing {
+    color: $yellow;
+  }
+}
+
+.waterworks {
+  .drawing {
+    color: $dark-blue;
+  }
+}
+
+.income-tax {
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .name {
+    padding-bottom: 5px;
+  }
+
+  .diamond {
+    width: 5px;
+    height: 5px;
+    background: $black;
+    transform: rotate(45deg);
+    display: inline-block;
+  }
+
+  .instructions {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.luxury-tax {
+  .drawing {
+    font-size: 50px;
+  }
+
+  .instructions {
+    padding-bottom: 5px;
+  }
+}
+
+// =================
+// UTILITY
+// =================
+.long-name {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.three-line-name {
+  position: relative;
+  top: 5px;
+}

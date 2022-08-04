@@ -1,0 +1,703 @@
+#form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tarjetas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tarjetas > div {
+  margin: 1.5%;
+}
+
+.Input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3% 2% 2% 2%;
+  font-size: 1rem;
+}
+
+.Input :focus, .Input :hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  -webkit-box-shadow: 0.2em 0.2em #ffffff95;
+          box-shadow: 0.2em 0.2em #ffffff95;
+}
+
+.Input ::-webkit-input-placeholder {
+  color: #316163;
+}
+
+.Input :-ms-input-placeholder {
+  color: #316163;
+}
+
+.Input ::-ms-input-placeholder {
+  color: #316163;
+}
+
+.Input ::placeholder {
+  color: #316163;
+}
+
+.jugador {
+  border-radius: 25px;
+  padding: 1%;
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+.Input-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2%;
+  width: 100%;
+  border: none;
+  border-radius: 0.4rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.fotos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+input#fotoJ11[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/avion.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ11[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ11[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ12[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/pretzel.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ12[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ12[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ13[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/taza.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ13[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ13[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ14[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/gelatina.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ14[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ14[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ21[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/avion.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ21[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ21[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ22[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/pretzel.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ22[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ22[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ23[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/taza.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ23[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ23[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ24[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/gelatina.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ24[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ24[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ31[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/avion.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ31[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ31[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ32[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/pretzel.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ32[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ32[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ33[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/taza.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ33[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ33[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ34[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/gelatina.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ34[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ34[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ41[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/avion.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ41[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ41[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ42[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/pretzel.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ42[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ42[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ43[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/taza.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ43[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ43[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+input#fotoJ44[type="radio"] + label {
+  border-color: transparent;
+  background-image: url("../../static/iconos/gelatina.png");
+  background-repeat: no-repeat;
+  background-color: #ffffff95;
+  background-origin: content-box;
+  border: 0.2rem solid white;
+  border-radius: 20px;
+  background-size: contain;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  padding: 2%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input#fotoJ44[type="radio"] + label:hover {
+  outline: none;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+input#fotoJ44[type="radio"]:checked + label {
+  background-color: #ffffff95;
+  border-style: solid;
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+.boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  margin: 0.5%;
+}
+
+.boton input[type="submit"] {
+  padding: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 1rem;
+  background-color: #2df9ff;
+  color: white;
+  font: Oswald;
+  font-size: 3rem;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: none;
+}
+
+.boton input[type="submit"]:hover, .boton input[type="submit"]:focus {
+  background-color: #30d1d6;
+  -webkit-box-shadow: 0.1em 0.1em #ffffff95;
+          box-shadow: 0.1em 0.1em #ffffff95;
+}
+/*# sourceMappingURL=style_reinicio.css.map */

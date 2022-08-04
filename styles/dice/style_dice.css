@@ -1,0 +1,250 @@
+.sides {
+  background-color: #f0f0f0;
+  display: block;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0em 0em 0.5em 0.5em rgba(0, 0, 0, 0.123);
+          box-shadow: inset 0em 0em 0.5em 0.5em rgba(0, 0, 0, 0.123);
+}
+
+#dice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90px;
+  height: 90px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1.5s ease-out;
+  transition: -webkit-transform 1.5s ease-out;
+  transition: transform 1.5s ease-out;
+  transition: transform 1.5s ease-out, -webkit-transform 1.5s ease-out;
+}
+
+#dice:hover {
+  cursor: pointer;
+  background-color: rgba(69, 104, 105, 0.604);
+}
+
+#dice .side-1 {
+  -webkit-transform: translateZ(45px);
+          transform: translateZ(45px);
+}
+
+#dice[data-side="1"] {
+  -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg);
+          transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg);
+}
+
+#dice[data-side="1"].reRoll {
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+          transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+#dice .side-2 {
+  -webkit-transform: rotateX(-180deg) translateZ(45px);
+          transform: rotateX(-180deg) translateZ(45px);
+}
+
+#dice[data-side="2"] {
+  -webkit-transform: rotateX(360deg) rotateY(540deg) rotateZ(720deg);
+          transform: rotateX(360deg) rotateY(540deg) rotateZ(720deg);
+}
+
+#dice[data-side="2"].reRoll {
+  -webkit-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+          transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+}
+
+#dice .side-3 {
+  -webkit-transform: rotateY(90deg) translateZ(45px);
+          transform: rotateY(90deg) translateZ(45px);
+}
+
+#dice[data-side="3"] {
+  -webkit-transform: rotateX(360deg) rotateY(630deg) rotateZ(720deg);
+          transform: rotateX(360deg) rotateY(630deg) rotateZ(720deg);
+}
+
+#dice[data-side="3"].reRoll {
+  -webkit-transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg);
+          transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg);
+}
+
+#dice .side-4 {
+  -webkit-transform: rotateY(-90deg) translateZ(45px);
+          transform: rotateY(-90deg) translateZ(45px);
+}
+
+#dice[data-side="4"] {
+  -webkit-transform: rotateX(360deg) rotateY(450deg) rotateZ(720deg);
+          transform: rotateX(360deg) rotateY(450deg) rotateZ(720deg);
+}
+
+#dice[data-side="4"].reRoll {
+  -webkit-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+          transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+}
+
+#dice .side-5 {
+  -webkit-transform: rotateX(90deg) translateZ(45px);
+          transform: rotateX(90deg) translateZ(45px);
+}
+
+#dice[data-side="5"] {
+  -webkit-transform: rotateX(630deg) rotateY(360deg) rotateZ(720deg);
+          transform: rotateX(630deg) rotateY(360deg) rotateZ(720deg);
+}
+
+#dice[data-side="5"].reRoll {
+  -webkit-transform: rotateX(270deg) rotateY(0deg) rotateZ(0deg);
+          transform: rotateX(270deg) rotateY(0deg) rotateZ(0deg);
+}
+
+#dice .side-6 {
+  -webkit-transform: rotateX(-90deg) translateZ(45px);
+          transform: rotateX(-90deg) translateZ(45px);
+}
+
+#dice[data-side="6"] {
+  -webkit-transform: rotateX(450deg) rotateY(360deg) rotateZ(720deg);
+          transform: rotateX(450deg) rotateY(360deg) rotateZ(720deg);
+}
+
+#dice[data-side="6"].reRoll {
+  -webkit-transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+          transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.dot {
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: black;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* 1 */
+.side-1 .dot-1 {
+  top: 50%;
+  left: 50%;
+}
+
+/* 2 */
+.side-2 .dot-1 {
+  top: 25%;
+  left: 25%;
+}
+
+.side-2 .dot-2 {
+  top: 75%;
+  left: 75%;
+}
+
+/* 3 */
+.side-3 .dot-1 {
+  top: 25%;
+  left: 25%;
+}
+
+.side-3 .dot-2 {
+  top: 75%;
+  left: 75%;
+}
+
+.side-3 .dot-3 {
+  top: 50%;
+  left: 50%;
+}
+
+/* 4 */
+.side-4 .dot-1 {
+  top: 25%;
+  left: 25%;
+}
+
+.side-4 .dot-2 {
+  top: 25%;
+  left: 75%;
+}
+
+.side-4 .dot-3 {
+  top: 75%;
+  left: 25%;
+}
+
+.side-4 .dot-4 {
+  top: 75%;
+  left: 75%;
+}
+
+/* 5 */
+.side-5 .dot-1 {
+  top: 25%;
+  left: 25%;
+}
+
+.side-5 .dot-2 {
+  top: 25%;
+  left: 75%;
+}
+
+.side-5 .dot-3 {
+  top: 75%;
+  left: 25%;
+}
+
+.side-5 .dot-4 {
+  top: 75%;
+  left: 75%;
+}
+
+.side-5 .dot-5 {
+  top: 50%;
+  left: 50%;
+}
+
+/* 6 */
+.side-6 .dot-1 {
+  top: 25%;
+  left: 25%;
+}
+
+.side-6 .dot-2 {
+  top: 25%;
+  left: 75%;
+}
+
+.side-6 .dot-3 {
+  top: 75%;
+  left: 25%;
+}
+
+.side-6 .dot-4 {
+  top: 75%;
+  left: 75%;
+}
+
+.side-6 .dot-5 {
+  top: 50%;
+  left: 25%;
+}
+
+.side-6 .dot-6 {
+  top: 50%;
+  left: 75%;
+}
+/*# sourceMappingURL=style_dice.css.map */
