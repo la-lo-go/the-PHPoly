@@ -5,16 +5,16 @@
 </div>
 
 <!-- Content -->
-4 player Monopoly web game made with HTML, SASS, JavaScript (vanilla, without any framework), and PHP with inspiration from *“The Office”* series.
+4 player Monopoly web game made with HTML, SASS, PHP and JavaScript (vanilla, without any framework) with inspiration from *The Office* series.
 
 The players names and icons are stored in a SQL database.
 
-You can try a **fully** functional version [here](https://la-lo-go.github.io/the-PHPoly/index_html.html) but note that the names of the players and their icons are set by default so, if you summit the restart form, it will probably throw an error.
+You can try a **fully** functional version [here](https://la-lo-go.github.io/the-PHPoly/index_html.html) but note that the names of the players and their icons are set by default and there is not any database hosted there so, if you summit the restart form, it throw an error.
 
 ## Gameplay 
 ![General example demostration GIF](./docs/captures/gifs/GeneralExample.gif)
 
-Players roll a dice (hitting the 🎲 icon) and choose whether to buy the properties (🪙) or pass (➡️) and if they land on others' properties, they automatically pay rent. The game ends when only one player remains.
+Players roll a dice (hitting the 🎲 icon) and choose whether to buy the propertie (🪙) or pass (➡️) and if they land on others' properties, they automatically pay rent. The game ends when only one player remains.
 
 The game can be restarted clicking the ♻️ icon and a form will appear to enter the names and preffered icon of the players.
 
@@ -36,7 +36,7 @@ The game can be restarted clicking the ♻️ icon and a form will appear to ent
 ## Deploy
 1. Copy or clone the repository into your PHP folder
    ```bash
-    git clone https://github.com/la-lo-go/the-PHPpoly
+    git clone https://github.com/la-lo-go/the-PHPoly
    ```
 2. Import the database (the [thephpoly.sql](./thephpoly.sql) file) into your MySQL server.
 3. If necessary, change the `$host`, `$user` or `$pass` values in the [conexion.php](./conexion.php) file with the keys of your database server.
@@ -44,11 +44,11 @@ The game can be restarted clicking the ♻️ icon and a form will appear to ent
 
 ## Documentation
 <details> 
-   <summary>Expand to see diagrams</summary>
+   <summary>Expand to see the diagrams</summary>
 
    | Use cases  | Navigation flow |
    |:---:|:-----------------------:|
-   |<img src="./docs/figures/casos%20de%20uso/PI_Casos de Uso.drawio.png" width="50%" alt="Use cases diagrams">|<img src="./docs/figures/Flujo navegacion/Flujo navegacion.drawio.png" alt="Navigation Flow diagram">|
+   |<img src="./docs/figures/casos%20de%20uso/PI_Casos%20de%20Uso.drawio.png" width="50%" alt="Use cases diagrams">|<img src="./docs/figures/Flujo navegacion/Flujo navegacion.drawio.png" alt="Navigation Flow diagram">|
 
    | Class diagram  | Architecture |
    |:---:|:-----------------------:|
@@ -56,7 +56,7 @@ The game can be restarted clicking the ♻️ icon and a form will appear to ent
 </details>
 
 ## Final notes
-I wish this was a complete port but it is not, this was part of my first course final project so a lot of stuff that I would have liked to implement, like building and cards are not here.
+I wish this was a complete port but it is not, this was part of my first course final project so a lot of stuff that I would have liked to implement, like building or cards, are not here.
 
 So... that's it! Thanks! 🤠
 
