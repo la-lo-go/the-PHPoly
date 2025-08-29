@@ -12,6 +12,17 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
         integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script src="./scripts/radioChecker.js"></script>
+    <script type="module">
+        // Clear localStorage when starting a new game
+        import GameStorage from './scripts/modelos/GameStorage.js';
+        
+        $(document).ready(function() {
+            $('form').on('submit', function() {
+                GameStorage.clearGameState();
+                console.log('Cleared saved game state for new game');
+            });
+        });
+    </script>
         <title>Reinicio</title>
 </head>
 

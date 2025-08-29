@@ -1,4 +1,5 @@
 import Constructora from "./Constructora.js";
+import GameStorage from "./GameStorage.js";
 
 export default class Juego {
   constructor() {
@@ -7,6 +8,15 @@ export default class Juego {
     this.ronda = 0;
     this.botones = $(".botones");
     this.jugadoresMuertos = [];
+
+    // Set reference for localStorage saves
+    Jugador.currentGame = this;
+
+    // Try to load saved game state first
+    const savedState = GameStorage.loadGameState();
+    if (savedState) {
+      GameStorage.restoreGameState(this, savedState);
+    }
 
     this.#initialize();
 
@@ -96,6 +106,8 @@ export default class Juego {
               juego.cambiarMensaje(
                 `${jugadorActual.nombre} ha pagado alquiler a ${casilla.propietario.nombre}`
               );
+              // Save game state after rent payment
+              GameStorage.saveGameState(juego);
             } else {
               Juego.pasar(juego);
             }
@@ -109,6 +121,8 @@ export default class Juego {
           juego.cambiarMensaje(
             `${jugadorActual.nombre} ha pagado los impuestos`
           );
+          // Save game state after tax payment
+          GameStorage.saveGameState(juego);
           Juego.pasar(juego);
           break;
 
@@ -184,6 +198,9 @@ export default class Juego {
       jugadorActual.vuelta();
     }
 
+    // Save game state after position change
+    GameStorage.saveGameState(juego);
+
     return casillaObjetivo;
   }
 
@@ -200,6 +217,10 @@ export default class Juego {
     juego.cambiarMensaje(
       `${jugadorComprador.nombre} ha comprado ${casillaComprada.nombre}`
     );
+    
+    // Save game state after property purchase
+    GameStorage.saveGameState(juego);
+    
     Juego.pasar(juego);
   }
 
@@ -238,6 +259,9 @@ export default class Juego {
     }
 
     juego.ronda++;
+    
+    // Save game state after turn change
+    GameStorage.saveGameState(juego);
   }
 
   mostrar(div) {
@@ -260,5 +284,12 @@ export default class Juego {
     setTimeout(() => {
       this.ocultar(mensajeDiv);
     }, 3000);
+  }
+
+  /**
+   * Clear saved game state (useful for game reset)
+   */
+  static clearSavedState() {
+    GameStorage.clearGameState();
   }
 }

@@ -1,4 +1,8 @@
+import GameStorage from "./GameStorage.js";
+
 export default class Jugador {
+  static currentGame = null; // Reference to current game for localStorage saves
+
   constructor(div) {
     this.div = div;
     this.nombre = div.getElementsByClassName("nombre")[0].innerHTML;
@@ -66,6 +70,10 @@ export default class Jugador {
 
   vuelta() {
     this.#transferencia(200);
+    // Save game state after collecting lap bonus
+    if (Jugador.currentGame) {
+      GameStorage.saveGameState(Jugador.currentGame);
+    }
   }
 
   /** Paga o recibe dinero y lo muestra en el div
@@ -116,6 +124,10 @@ export default class Jugador {
       jugador.divDinero.innerHTML = "0";
       jugador.propiedadesCantidad.innerHTML = "0";
 
+      // Save game state after bankruptcy
+      if (Jugador.currentGame) {
+        GameStorage.saveGameState(Jugador.currentGame);
+      }
 
       mostrarMensaje(jugador.nombre);
 
