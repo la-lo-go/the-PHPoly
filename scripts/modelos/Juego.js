@@ -1,5 +1,6 @@
 import Constructora from "./Constructora.js";
 import GameStorage from "./GameStorage.js";
+import Jugador from "./Jugador.js";
 
 export default class Juego {
   constructor() {
