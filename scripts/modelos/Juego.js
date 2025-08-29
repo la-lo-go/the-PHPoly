@@ -109,6 +109,7 @@ export default class Juego {
               );
               // Save game state after rent payment
               GameStorage.saveGameState(juego);
+              Juego.pasar(juego);
             } else {
               Juego.pasar(juego);
             }

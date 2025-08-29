@@ -86,6 +86,19 @@ export default class GameStorage {
         juego.jugadoresMuertos = gameState.jugadoresMuertos.map(index => juego.jugadores[index]).filter(Boolean);
       }
 
+      // Clear existing visual state before restoration
+      juego.casillas.forEach(casilla => {
+        casilla.historial = [];
+        casilla.div.style.backgroundColor = "#f0f0f0";
+        casilla.div.style.boxShadow = "none";
+        casilla.propietario = null;
+      });
+
+      // Clear player properties arrays
+      juego.jugadores.forEach(jugador => {
+        jugador.propiedades = [];
+      });
+
       // Restore player states
       gameState.jugadores.forEach((savedJugador, index) => {
         if (index < juego.jugadores.length) {
@@ -117,8 +130,8 @@ export default class GameStorage {
           casilla.propietario = propietario;
           propietario.propiedades.push(casilla);
           
-          // Update visual ownership
-          casilla.div.style.boxShadow = "inset 0em 0em 0em 0.4em" + propietario.color;
+          // Update visual ownership with proper spacing
+          casilla.div.style.boxShadow = "inset 0em 0em 0em 0.4em " + propietario.color;
         }
       });
 
